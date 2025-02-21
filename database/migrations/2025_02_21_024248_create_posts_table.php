@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('brand');
+            $table->string('platform');
+            $table->date('due_date');
+            $table->decimal('payment', 10, 2);
+            $table->string('status');
             $table->timestamps();
         });
     }
